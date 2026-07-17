@@ -6103,8 +6103,11 @@ export class ColumnFilter extends BaseComponent {
     }
 
     toggleMenu(event: Event) {
-        this.overlayVisible = !this.overlayVisible;
-        this.renderOverlay.set(!this.renderOverlay());
+        if (this.overlayVisible) {
+            this.hide();
+        } else {
+            this.show();
+        }
         event.stopPropagation();
     }
 
@@ -6112,7 +6115,7 @@ export class ColumnFilter extends BaseComponent {
         switch (event.key) {
             case 'Escape':
             case 'Tab':
-                this.overlayVisible = false;
+                this.hide();
                 break;
 
             case 'ArrowDown':
@@ -6135,7 +6138,7 @@ export class ColumnFilter extends BaseComponent {
     }
 
     onEscape() {
-        this.overlayVisible = false;
+        this.hide();
         this.icon?.nativeElement.focus();
     }
 
@@ -6185,12 +6188,12 @@ export class ColumnFilter extends BaseComponent {
 
     onOverlayAnimationAfterLeave(event: MotionEvent) {
         this.restoreOverlayAppend();
+        ZIndexUtils.clear(this.overlay);
         this.onOverlayHide();
         this.renderOverlay.set(false);
         if (this.overlaySubscription) {
             this.overlaySubscription.unsubscribe();
         }
-        ZIndexUtils.clear(this.overlay);
 
         this.onHide.emit({ originalEvent: event as any });
     }
@@ -6308,6 +6311,12 @@ export class ColumnFilter extends BaseComponent {
         if (this.scrollHandler) {
             this.scrollHandler.unbindScrollListener();
         }
+    }
+
+    show() {
+        this.renderOverlay.set(true);
+        this.overlayVisible = true;
+        this.cd.markForCheck();
     }
 
     hide() {
