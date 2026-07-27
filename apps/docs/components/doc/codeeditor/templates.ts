@@ -21,14 +21,14 @@ const dependencies = {
     '@angular/platform-browser': '^21.0.0',
     '@angular/platform-browser-dynamic': '^21.0.0',
     '@angular/router': '^21.0.0',
-    '@openng/optimus-ui-themes': '^2.0.2',
+    '@openng/optimus-ui-themes': `${version}`,
     'chart.js': '4.4.2',
     '@openng/icons': '^1.0.0',
     '@openng/optimus-ui': `${version}`,
     quill: '2.0.2',
     rxjs: '~7.8.0',
     tailwindcss: '^3.4.10',
-    '@openng/optimus-ui-tailwindcss': '^1.0.0-rc.1',
+    '@openng/optimus-ui-tailwindcss': `${version}`,
     tslib: '^2.3.0',
     'zone.js': '~0.15.0'
 };
