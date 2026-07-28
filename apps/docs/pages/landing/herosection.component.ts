@@ -14,6 +14,7 @@ import { DrawerModule } from '@openng/optimus-ui/drawer';
 import { KnobModule } from '@openng/optimus-ui/knob';
 import { OverlayBadgeModule } from '@openng/optimus-ui/overlaybadge';
 import { SelectButton } from '@openng/optimus-ui/selectbutton';
+import { TagModule } from '@openng/optimus-ui/tag';
 import { ToggleSwitchModule } from '@openng/optimus-ui/toggleswitch';
 import { TooltipModule } from '@openng/optimus-ui/tooltip';
 import { Subscription } from 'rxjs';
@@ -32,6 +33,7 @@ import { OverviewApp } from './samples/overviewapp.component';
         RouterModule,
         ChartModule,
         SelectButton,
+        TagModule,
         ToggleSwitchModule,
         BadgeModule,
         FormsModule,
@@ -307,11 +309,12 @@ import { OverviewApp } from './samples/overviewapp.component';
                             <div *ngFor="let data of opportunities" class="flex flex-col p-3 rounded-xl bg-emphasis">
                                 <div class="flex items-start justify-between gap-2">
                                     <div class="font-medium text-color mt-0.5">{{ data.title }}</div>
-                                    <a [href]="data.link" target="_blank" rel="noopener">
-                                        <p-button icon="pi pi-arrow-up-right text-sm !leading-none" styleClass="w-8 h-8 !border-surface !bg-surface-0 dark:!bg-surface-900" severity="secondary" text />
-                                    </a>
+                                    <p-tag [value]="data.stage" [severity]="data.severity" />
                                 </div>
-                                <img class="w-full rounded-lg mt-2 block" [src]="data.image" alt="Opportunutiy Image" />
+                                <div class="w-full rounded-lg mt-2 p-4 bg-surface-0 dark:bg-surface-900 flex items-baseline gap-2">
+                                    <span class="text-2xl font-semibold text-color">{{ data.value }}</span>
+                                    <span class="text-xs text-muted-color">{{ data.owner }}</span>
+                                </div>
                                 <div class="flex-1 mt-2 p-2 rounded-lg bg-surface-0 dark:bg-surface-900 text-xs text-color">
                                     {{ data.text }}
                                 </div>
@@ -542,40 +545,52 @@ export class HeroSectionComponent implements OnInit, OnDestroy {
 
         this.opportunities = [
             {
-                title: 'Apollo',
-                link: 'https://apollo.primeng.org',
-                image: 'https://primefaces.org/cdn/primeng/images/layouts/apollo-ng.jpg',
-                text: 'Keep your application fresh with Apollo, the newest and most modern template available.'
+                title: 'Northwind Retail',
+                stage: 'Proposal',
+                severity: 'info',
+                value: '$48,200',
+                owner: 'Amy Elsner',
+                text: 'Migrating three storefronts onto a shared design system. Waiting on security review.'
             },
             {
-                title: 'Ultima',
-                link: 'https://ultima.primeng.org/',
-                image: 'https://primefaces.org/cdn/primeng/images/layouts/ultima-ng.jpg',
-                text: "Elevate your application's intuitiveness with Ultima's premium Material Design interface."
+                title: 'Atlas Manufacturing',
+                stage: 'Negotiation',
+                severity: 'warn',
+                value: '$126,000',
+                owner: 'Onyama Limba',
+                text: 'Multi-year platform contract. Legal has the redlines, close expected next quarter.'
             },
             {
-                title: 'Diamond',
-                link: 'https://diamond.primeng.org/',
-                image: 'https://primefaces.org/cdn/primeng/images/layouts/diamond-ng.jpg',
-                text: "Handle complex operations with elegance with Diamond's robust and powerful premium design."
+                title: 'Cedar Health',
+                stage: 'Won',
+                severity: 'success',
+                value: '$71,500',
+                owner: 'Ioni Bowcher',
+                text: 'Accessibility audit passed on the first pass. Rollout starts with the patient portal.'
             },
             {
-                title: 'Atlantis',
-                link: 'https://atlantis.primeng.org/',
-                image: 'https://primefaces.org/cdn/primeng/images/layouts/atlantis-ng.jpg',
-                text: "Boost your application's capabilities, customization with the Atlantis template."
+                title: 'Blue Harbor Logistics',
+                stage: 'Discovery',
+                severity: 'secondary',
+                value: '$19,800',
+                owner: 'Asiya Javayant',
+                text: 'Evaluating a replacement for an in-house component library built in 2017.'
             },
             {
-                title: 'Verona',
-                link: 'https://verona.primeng.org/',
-                image: 'https://primefaces.org/cdn/primeng/images/layouts/verona-ng.jpg',
-                text: "Achieve sophistication and subtlety with Verona's minimalistic, content-focused design."
+                title: 'Meridian Bank',
+                stage: 'Proposal',
+                severity: 'info',
+                value: '$204,000',
+                owner: 'Xuxue Feng',
+                text: 'Regulated environment, needs an on-premise build pipeline and long-term support.'
             },
             {
-                title: 'Freya',
-                link: 'https://freya.primeng.org/',
-                image: 'https://primefaces.org/cdn/primeng/images/layouts/freya-ng.jpg',
-                text: "Give your application a sleek, updated look with Freya's chic and modern premium template."
+                title: 'Fairlane Studios',
+                stage: 'Lost',
+                severity: 'danger',
+                value: '$12,400',
+                owner: 'Stephen Shaw',
+                text: 'Went with an internal solution. Worth revisiting when their team grows.'
             }
         ];
 
