@@ -42,7 +42,7 @@ import { SelectModule } from '@openng/optimus-ui/select';
                     </a>
                 </li>
                 <li>
-                    <a [href]="discordUrl" target="_blank" rel="noopener noreferrer" class="topbar-item">
+                    <a [href]="discordUrl" target="_blank" rel="noopener noreferrer" class="topbar-item" aria-label="Angular community Discord" title="Angular community Discord">
                         <i class="pi pi-discord text-surface-700 dark:text-surface-100"></i>
                     </a>
                 </li>

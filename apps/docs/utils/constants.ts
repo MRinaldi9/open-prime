@@ -1,4 +1,6 @@
 export const PROJECT_NAME = 'Optimus UI';
+// The Angular community Discord — Optimus UI does not run its own server.
+// Label every link to it as such so visitors are not misled.
 export const DISCORD_URL = 'https://discord.gg/angular';
 export const GITHUB_REPO_URL = 'https://github.com/openng-org/optimus-ui';
 export const GITHUB_REPO_HEAD = `${GITHUB_REPO_URL}/tree/main`;

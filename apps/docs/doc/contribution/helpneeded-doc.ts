@@ -22,7 +22,7 @@ import { AppDocSectionText } from '@/components/doc/app.docsectiontext';
             <h3>Community Support</h3>
             <p>
                 Assist other users by participating in the issue tracker, <a href="https://github.com/openng-org/optimus-ui/discussions" target="_blank" rel="noopener noreferrer">GitHub discussions</a>, and the
-                <a href="https://discord.gg/angular" target="_blank" rel="noopener noreferrer">Discord</a> server. Your expertise can help others solve problems and improve their experience with Optimus UI.
+                <a href="https://discord.gg/angular" target="_blank" rel="noopener noreferrer">Angular community Discord</a>. Your expertise can help others solve problems and improve their experience with Optimus UI.
             </p>
         </app-docsectiontext>
     `
