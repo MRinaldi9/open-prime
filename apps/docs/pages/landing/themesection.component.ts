@@ -19,7 +19,7 @@ import { Tag } from '@openng/optimus-ui/tag';
     template: `
         <section class="landing-themes py-20">
             <div class="section-header">Components</div>
-            <p class="section-detail">The most complete UI component library for Angular based on a design-agnostic infrastructure.</p>
+            <p class="section-detail">Design-agnostic theming: swap a preset, override design tokens, or go fully unstyled.</p>
             <div class="themes-main flex mt-16 justify-center px-8 lg:px-20">
                 <div class="box overflow-hidden z-10 p-8 table-container">
                     <p-table #dt [value]="customers" [(selection)]="selectedCustomers" dataKey="id" [rowHover]="true" [rows]="5" [loading]="loading" [paginator]="true" [globalFilterFields]="['name', 'country.name', 'representative.name', 'status']">

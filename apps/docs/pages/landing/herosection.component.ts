@@ -55,9 +55,9 @@ import { OverviewApp } from './samples/overviewapp.component';
     template: `
         <section class="landing-hero py-20 px-8 lg:px-20">
             <div class="flex flex-col items-center">
-                <h1 class="text-5xl font-bold text-center xl:text-left leading-tight">The Next-Gen UI Suite for <span class="font-bold text-primary">Angular</span></h1>
+                <h1 class="text-5xl font-bold text-center xl:text-left leading-tight">The Open Source UI Suite for <span class="font-bold text-primary">Angular</span></h1>
                 <p class="text-center mt-0 mb-8 text-surface-500 dark:text-surface-400 font-medium text-xl leading-relaxed lg:px-56">
-                    Enhance your web applications with Optimus UI's comprehensive suite of customizable, feature-rich UI components. With Optimus UI, turning your development vision into reality has never been easier.
+                    80+ accessible, customizable Angular components under the MIT license. A community-maintained continuation of PrimeNG v21, built to stay open.
                 </p>
                 <div class="flex items-center gap-4">
                     <a [routerLink]="'installation'" class="linkbox linkbox-primary">

@@ -1,6 +1,6 @@
 # Optimus UI
 
-> The Most Complete Angular UI Component Library
+> A community-maintained, MIT licensed suite of 80+ accessible Angular UI components.
 
 ## Guides
 

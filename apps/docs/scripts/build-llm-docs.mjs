@@ -1043,7 +1043,7 @@ function generateMarkdownOutput(components, apiDocs, guidePages = []) {
  */
 function generateLlmsTxt(components, pages = []) {
     let content = '# Optimus UI\n\n';
-    content += '> The Most Complete Angular UI Component Library\n\n';
+    content += '> A community-maintained, MIT licensed suite of 80+ accessible Angular UI components.\n\n';
 
     // Add Guides section
     if (pages.length > 0) {
