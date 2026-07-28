@@ -39,7 +39,7 @@ export function app(): express.Express {
 
     // Pages that have their own markdown files (not components)
     // These are defined in GUIDE_PAGES in build-llm-docs.mjs
-    const pageNames = new Set(['installation', 'configuration', 'styled', 'unstyled', 'icons', 'customicons', 'passthrough', 'tailwind', 'llms', 'accessibility', 'animations', 'rtl']);
+    const pageNames = new Set(['installation', 'configuration', 'styled', 'unstyled', 'icons', 'customicons', 'passthrough', 'tailwind', 'llms', 'accessibility', 'animations', 'rtl', 'primeflex', 'philosophy', 'faq', 'primeng', 'contribution']);
 
     // Serve markdown files - handles both components and pages
     server.get('/:name.md', (req, res, next) => {

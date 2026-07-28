@@ -16,6 +16,11 @@
 - [Accessibility](https://optimus.openng.org/guides/accessibility): Optimus UI has WCAG 2.1 AA level compliance.
 - [Animations](https://optimus.openng.org/guides/animations): Built-in CSS animations for Optimus UI components.
 - [RTL](https://optimus.openng.org/guides/rtl): Right-to-left support for Optimus UI components.
+- [PrimeFlex](https://optimus.openng.org/guides/primeflex): Moving from PrimeFlex to Tailwind CSS.
+- [Philosophy](https://optimus.openng.org/philosophy): Why Optimus UI exists, what it commits to, and where it stops.
+- [FAQ](https://optimus.openng.org/faq): Licensing, migration from PrimeNG, the ecosystem, and how support works.
+- [Migrate from PrimeNG](https://optimus.openng.org/migration/primeng): Moving a PrimeNG v21 application to Optimus UI.
+- [Contribution Guide](https://optimus.openng.org/contribution): How to contribute to Optimus UI.
 
 ## Components
 
@@ -111,5 +116,5 @@
 - [Angular TreeSelect Component](https://optimus.openng.org/treeselect): TreeSelect is a form component to choose from hierarchical data.
 - [Angular TreeTable Component](https://optimus.openng.org/treetable): TreeTable is used to display hierarchical data in tabular format.
 - [Angular Virtual Scroller Component](https://optimus.openng.org/virtualscroller): VirtualScroller is a performance-approach to handle huge data efficiently.
-- [LLMs.txt - Optimus UI](https://optimus.openng.org/llms): LLM-optimized documentation endpoints for Optimus UI components.
-- [Overlay API - Optimus UI](https://optimus.openng.org/overlay): This API allows overlay components to be controlled from the Optimus UI. In this way, all overlay components in the application can have the same behavior.
+- [LLMs.txt](https://optimus.openng.org/llms): LLM-optimized documentation endpoints for Optimus UI components.
+- [Overlay API](https://optimus.openng.org/overlay): This API allows overlay components to be controlled from the Optimus UI. In this way, all overlay components in the application can have the same behavior.

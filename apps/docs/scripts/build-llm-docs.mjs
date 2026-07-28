@@ -141,6 +141,36 @@ const GUIDE_PAGES = [
         docPath: 'guides/rtl',
         title: 'RTL',
         description: 'Right-to-left support for Optimus UI components.'
+    },
+    {
+        route: 'guides/primeflex',
+        docPath: 'guides/primeflex',
+        title: 'PrimeFlex',
+        description: 'Moving from PrimeFlex to Tailwind CSS.'
+    },
+    {
+        route: 'philosophy',
+        docPath: 'philosophy',
+        title: 'Philosophy',
+        description: 'Why Optimus UI exists, what it commits to, and where it stops.'
+    },
+    {
+        route: 'faq',
+        docPath: 'faq',
+        title: 'FAQ',
+        description: 'Licensing, migration from PrimeNG, the ecosystem, and how support works.'
+    },
+    {
+        route: 'migration/primeng',
+        docPath: 'migration/primeng',
+        title: 'Migrate from PrimeNG',
+        description: 'Moving a PrimeNG v21 application to Optimus UI.'
+    },
+    {
+        route: 'contribution',
+        docPath: 'contribution',
+        title: 'Contribution Guide',
+        description: 'How to contribute to Optimus UI.'
     }
 ];
 
@@ -369,6 +399,9 @@ function getComponentMetadata(componentName) {
 
     // Extract from app-doc template attributes
     const docTitleMatch = content.match(/docTitle="([^"]+)"/);
+    // Page titles carry a ' - Optimus UI' suffix for the browser tab; the llms output
+    // is already headed '# Optimus UI', so drop it rather than repeat it on every line.
+    const docTitle = docTitleMatch ? docTitleMatch[1].replace(/\s+-\s+Optimus UI$/, '') : null;
     const headerMatch = content.match(/header="([^"]+)"/);
     const descriptionMatch = content.match(/description="([^"]+)"/);
     const apiDocsMatch = content.match(/\[apiDocs\]="(\[[^\]]+\])"/);
@@ -405,7 +438,7 @@ function getComponentMetadata(componentName) {
     }
 
     return {
-        title: docTitleMatch ? docTitleMatch[1] : componentName,
+        title: docTitle ?? componentName,
         header: headerMatch ? headerMatch[1] : componentName,
         description: descriptionMatch ? descriptionMatch[1] : '',
         sections,
@@ -492,6 +525,8 @@ function getAllComponents() {
         'configuration',
         'contribution',
         'customicons',
+        'faq',
+        'philosophy',
         'designer',
         'icons',
         'introduction',
