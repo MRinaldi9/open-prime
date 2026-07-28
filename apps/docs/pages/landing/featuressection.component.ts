@@ -39,7 +39,7 @@ import { AnimateOnScrollModule } from '@openng/optimus-ui/animateonscroll';
                             <div class="box p-6 w-full animate-duration-500" pAnimateOnScroll enterClass="animate-fadein">
                                 <img src="https://primefaces.org/cdn/primeng/images/landing/features/icon-accessibility.svg" alt="components icon" class="block mb-4" />
                                 <div class="font-semibold mb-4 text-lg">Accessibility</div>
-                                <p class="m-0 text-surface-500 dark:text-surface-400 font-medium">Compliant with the Web Content Accessibility Guidelines (WCAG 2.0).</p>
+                                <p class="m-0 text-surface-500 dark:text-surface-400 font-medium">Targets AA level compliance with the Web Content Accessibility Guidelines (WCAG 2.1).</p>
                             </div>
                         </div>
                         <div class="col-span-12 md:col-span-6 xl:col-span-4 flex justify-center">
