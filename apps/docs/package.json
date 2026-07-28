@@ -11,9 +11,10 @@
         "lint": "ng lint",
         "build": "ng build",
         "build:apidoc": "node scripts/build-apidoc.mjs",
+        "build:routes": "node scripts/build-routes.mjs",
         "build:llm-docs": "node scripts/build-llm-docs.mjs",
         "build:democode": "node scripts/build-demo-code.mjs",
-        "build:docs": "npm run build:apidoc && npm run build:democode && npm run build:llm-docs && npm run test:democode && npm run test:stackblitz",
+        "build:docs": "npm run build:apidoc && npm run build:democode && npm run build:llm-docs && npm run build:routes && npm run test:democode && npm run test:stackblitz",
         "test:democode": "node scripts/test-demo-code.mjs",
         "test:stackblitz": "node scripts/test-stackblitz-e2e.mjs --all"
     },
