@@ -61,6 +61,12 @@ const COMPONENT_NAME_MAP = {
     styleclass: 'StyleClass'
 };
 
+// Components whose documentation directory name differs from their public route.
+// Keep in sync with router/app.routes.ts.
+const COMPONENT_ROUTE_MAP = {
+    scroller: 'virtualscroller'
+};
+
 // Guide/documentation pages configuration
 // Maps route paths to their doc directories and metadata
 const GUIDE_PAGES = [
@@ -1021,7 +1027,8 @@ function generateLlmsTxt(components, pages = []) {
     const sorted = [...components].sort((a, b) => a.title.localeCompare(b.title));
 
     for (const comp of sorted) {
-        content += `- [${comp.title}](https://optimus.openng.org/${comp.name}): ${comp.description}\n`;
+        const route = COMPONENT_ROUTE_MAP[comp.name] ?? comp.name;
+        content += `- [${comp.title}](https://optimus.openng.org/${route}): ${comp.description}\n`;
     }
 
     const outputPath = path.join(OUTPUT_DIR, 'llms.txt');
