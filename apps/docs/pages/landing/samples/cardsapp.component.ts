@@ -324,7 +324,7 @@ import { TooltipModule } from '@openng/optimus-ui/tooltip';
                                 <p-avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar8.png" class="w-9 h-9" shape="circle" />
                                 <div class="flex-1">
                                     <div class="text-sm font-medium text-color leading-5">Brook Simmons</div>
-                                    <div class="text-sm text-muted-color leading-5 line-clamp-4">brook.sim42&#64;primeng.org</div>
+                                    <div class="text-sm text-muted-color leading-5 line-clamp-4">brook.sim42&#64;example.com</div>
                                 </div>
                                 <p-select [(ngModel)]="memberSelectedTypes[0]" [options]="memberTypes" optionLabel="name" placeholder="Select" class="!border-0 !shadow-none" />
                             </div>
@@ -332,7 +332,7 @@ import { TooltipModule } from '@openng/optimus-ui/tooltip';
                                 <p-avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar13.jpg" class="w-9 h-9" shape="circle" />
                                 <div class="flex-1">
                                     <div class="text-sm font-medium text-color leading-5">Dianne Russell</div>
-                                    <div class="text-sm text-muted-color leading-5 line-clamp-4">di.russ23&#64;primeng.org</div>
+                                    <div class="text-sm text-muted-color leading-5 line-clamp-4">di.russ23&#64;example.com</div>
                                 </div>
                                 <p-select [(ngModel)]="memberSelectedTypes[1]" [options]="memberTypes" optionLabel="name" placeholder="Select" class="!border-0 !shadow-none" />
                             </div>
@@ -340,7 +340,7 @@ import { TooltipModule } from '@openng/optimus-ui/tooltip';
                                 <p-avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar12.jpg" class="w-9 h-9" shape="circle" />
                                 <div class="flex-1">
                                     <div class="text-sm font-medium text-color leading-5">Jacob Jones</div>
-                                    <div class="text-sm text-muted-color leading-5 line-clamp-4">jac.jon87&#64;primeng.org</div>
+                                    <div class="text-sm text-muted-color leading-5 line-clamp-4">jac.jon87&#64;example.com</div>
                                 </div>
                                 <p-select [(ngModel)]="memberSelectedTypes[2]" [options]="memberTypes" optionLabel="name" placeholder="Select" class="!border-0 !shadow-none" />
                             </div>

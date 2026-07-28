@@ -107,7 +107,7 @@ import { OverviewApp } from './samples/overviewapp.component';
                                     }"
                                     class="text-surface-950 dark:text-surface-0 font-medium text-3xl"
                                 >
-                                    Prime
+                                    Optimus
                                 </div>
                             </div>
                             <div class="mt-10 flex flex-col gap-2">

@@ -538,7 +538,7 @@
             "icon": "pi pi-eye",
             "children": [
                 {
-                    "name": "Prime Icons",
+                    "name": "OpenNG Icons",
                     "routerLink": "/icons"
                 },
                 {

@@ -8,7 +8,7 @@
 - [Configuration](https://optimus.openng.org/configuration): Application wide configuration for Optimus UI.
 - [Styled Mode](https://optimus.openng.org/theming/styled): Choose from a variety of pre-styled themes or develop your own.
 - [Unstyled Mode](https://optimus.openng.org/theming/unstyled): Theming Optimus UI with alternative styling approaches.
-- [Icons](https://optimus.openng.org/icons): PrimeIcons is the default icon library of Optimus UI with over 250 open source icons.
+- [Icons](https://optimus.openng.org/icons): OpenNG Icons is the default icon library of Optimus UI with over 250 open source icons.
 - [Custom Icons](https://optimus.openng.org/customicons): Use custom icons with Optimus UI components.
 - [Pass Through](https://optimus.openng.org/passthrough): Pass Through Props allow direct access to the underlying elements for complete customization.
 - [Tailwind CSS](https://optimus.openng.org/tailwind): Integration between Optimus UI and Tailwind CSS.

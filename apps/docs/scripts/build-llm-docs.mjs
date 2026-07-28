@@ -98,7 +98,7 @@ const GUIDE_PAGES = [
         route: 'icons',
         docPath: 'icons',
         title: 'Icons',
-        description: 'PrimeIcons is the default icon library of Optimus UI with over 250 open source icons.'
+        description: 'OpenNG Icons is the default icon library of Optimus UI with over 250 open source icons.'
     },
     {
         route: 'customicons',

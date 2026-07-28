@@ -265,7 +265,7 @@ export class ChatApp {
                 active: true,
                 unreadMessageCount: 8,
                 time: '12.30',
-                lastMessage: "Hey there! I've heard about PrimeVue. Any cool tips for getting started?"
+                lastMessage: "Hey there! I've heard about Optimus UI. Any cool tips for getting started?"
             },
             {
                 image: 'logo-icon.svg',
