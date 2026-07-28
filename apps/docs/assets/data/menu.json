@@ -436,12 +436,16 @@
                             "badge": "NEW"
                         },
                         {
-                            "name": "FocusTrap",
-                            "routerLink": "/focustrap"
+                            "name": "DragDrop",
+                            "routerLink": "/dragdrop"
                         },
                         {
                             "name": "Fluid",
                             "routerLink": "/fluid"
+                        },
+                        {
+                            "name": "FocusTrap",
+                            "routerLink": "/focustrap"
                         },
                         {
                             "name": "Inplace",
@@ -491,6 +495,10 @@
                         {
                             "name": "FilterService",
                             "routerLink": "/filterservice"
+                        },
+                        {
+                            "name": "Overlay API",
+                            "routerLink": "/overlay"
                         }
                     ]
                 }
@@ -510,7 +518,7 @@
                     "name": "Accessibility",
                     "routerLink": "/guides/accessibility"
                 },
-                       {
+                {
                     "name": "Animations",
                     "routerLink": "/guides/animations",
                     "badge": "NEW"
@@ -519,7 +527,7 @@
                     "name": "PrimeFlex",
                     "routerLink": "/guides/primeflex"
                 },
-                   {
+                {
                     "name": "RTL",
                     "routerLink": "/guides/rtl"
                 }
