@@ -305,6 +305,10 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://optimus.openng.org/philosophy</loc>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://optimus.openng.org/picklist</loc>
         <priority>0.7</priority>
     </url>

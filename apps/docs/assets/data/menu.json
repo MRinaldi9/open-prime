@@ -5,6 +5,10 @@
             "icon": "pi pi-home",
             "children": [
                 {
+                    "name": "Philosophy",
+                    "routerLink": "/philosophy"
+                },
+                {
                     "name": "Installation",
                     "routerLink": "/installation"
                 },

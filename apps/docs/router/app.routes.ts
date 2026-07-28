@@ -19,6 +19,7 @@ export const routes: Routes = [
                 path: 'configuration',
                 loadChildren: () => import('@/pages/configuration/routes')
             },
+            { path: 'philosophy', loadChildren: () => import('@/pages/philosophy/routes') },
             { path: 'playground', loadChildren: () => import('@/pages/playground/routes') },
             { path: 'roadmap', loadChildren: () => import('@/pages/roadmap/routes') },
             {

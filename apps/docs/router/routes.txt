@@ -74,6 +74,7 @@
 /panelmenu
 /passthrough
 /password
+/philosophy
 /picklist
 /playground
 /popover
