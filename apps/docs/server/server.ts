@@ -141,8 +141,28 @@ export function app(): express.Express {
         res.send(content);
     });
 
-    // Example Express Rest API endpoints
-    // server.get('/api/**', (req, res) => { });
+    // Upload sink for the FileUpload demos.
+    //
+    // These demos used to POST to primefaces.org/cdn/api/upload.php, an endpoint owned by
+    // another project that could disappear or start rejecting us without warning. This accepts
+    // the request, discards it and returns the shape the component expects. Nothing is stored.
+    // CORS is required because the demos are also exported to StackBlitz, which posts
+    // cross-origin back to this site.
+    server.options('/api/upload', (req, res) => {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+        res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+        res.status(204).end();
+    });
+
+    server.post('/api/upload', (req, res) => {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        req.resume();
+        req.on('end', () => {
+            res.status(200).json({ message: 'Uploaded' });
+        });
+    });
+
     // Serve static files from /browser
     server.get(
         '*.*',
