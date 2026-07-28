@@ -31,8 +31,8 @@ import { RouterModule } from '@angular/router';
 
             <h3>Why did the name change?</h3>
             <p>
-                Trademark. PrimeNG, PrimeFaces and PrimeFlex are PrimeTek's marks, so the packages, the CSS cascade layer and the icon library all needed new names. That is also why the rename is handled by a schematic rather than by asking you
-                to rewrite imports by hand.
+                Trademark. PrimeNG, PrimeFaces and PrimeFlex are PrimeTek's marks, so the packages, the CSS cascade layer and the icon library all needed new names. That is also why the rename is handled by a schematic rather than by asking you to
+                rewrite imports by hand.
             </p>
         </app-docsectiontext>
     `

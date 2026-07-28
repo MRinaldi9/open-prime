@@ -29,9 +29,7 @@ const routes = fs
     .map((line) => line.trim())
     .filter(Boolean);
 
-const urls = routes
-    .map((route) => `    <url>\n        <loc>${SITE_URL}${route === '/' ? '/' : route}</loc>\n        <priority>${priorityOf(route)}</priority>\n    </url>`)
-    .join('\n');
+const urls = routes.map((route) => `    <url>\n        <loc>${SITE_URL}${route === '/' ? '/' : route}</loc>\n        <priority>${priorityOf(route)}</priority>\n    </url>`).join('\n');
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
 

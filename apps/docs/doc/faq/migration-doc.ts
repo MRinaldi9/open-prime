@@ -28,8 +28,8 @@ import { RouterModule } from '@angular/router';
 
             <h3>I had an open PR on primefaces/primeng. Can I bring it here?</h3>
             <p>
-                Yes, and we would like you to. Append <i>.patch</i> to your original pull request URL and apply it with <i>git am</i> — the contributing guide in the repository walks through it, including what to do when the patch no longer
-                applies cleanly.
+                Yes, and we would like you to. Append <i>.patch</i> to your original pull request URL and apply it with <i>git am</i> — the contributing guide in the repository walks through it, including what to do when the patch no longer applies
+                cleanly.
             </p>
 
             <h3>Can I run PrimeNG and Optimus UI side by side?</h3>

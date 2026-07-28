@@ -9,9 +9,7 @@ import { RouterModule } from '@angular/router';
     template: `
         <app-docsectiontext>
             <h3>Is there commercial support?</h3>
-            <p>
-                No. There is no SLA, no support contract and no guaranteed response time. Issues and discussions are answered by volunteers when they have time. If your organisation needs contractual guarantees, this project cannot offer them.
-            </p>
+            <p>No. There is no SLA, no support contract and no guaranteed response time. Issues and discussions are answered by volunteers when they have time. If your organisation needs contractual guarantees, this project cannot offer them.</p>
 
             <h3>How do I report a bug?</h3>
             <p>
@@ -21,8 +19,8 @@ import { RouterModule } from '@angular/router';
 
             <h3>How do I request a feature?</h3>
             <p>
-                Open a <a href="https://github.com/openng-org/optimus-ui/discussions" target="_blank" rel="noopener noreferrer">discussion</a>. Requests are triaged and welcome, but in practice they ship when someone implements them. If it
-                matters to you, the <a [routerLink]="'/contribution'" class="doc-link">contribution guide</a> is the fastest route.
+                Open a <a href="https://github.com/openng-org/optimus-ui/discussions" target="_blank" rel="noopener noreferrer">discussion</a>. Requests are triaged and welcome, but in practice they ship when someone implements them. If it matters to
+                you, the <a [routerLink]="'/contribution'" class="doc-link">contribution guide</a> is the fastest route.
             </p>
 
             <h3>Where do I ask questions?</h3>

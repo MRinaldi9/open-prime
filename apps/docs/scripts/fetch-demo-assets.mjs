@@ -43,11 +43,7 @@ const CONCATENATED_ASSETS = [
 ];
 
 /** Sequential assets that no single file lists in full. */
-const EXTRA_ASSETS = [
-    ...Array.from({ length: 12 }, (_, i) => `demo/nature/nature${i + 1}.jpg`),
-    ...Array.from({ length: 15 }, (_, i) => `galleria/galleria${i + 1}.jpg`),
-    ...Array.from({ length: 15 }, (_, i) => `galleria/galleria${i + 1}s.jpg`)
-];
+const EXTRA_ASSETS = [...Array.from({ length: 12 }, (_, i) => `demo/nature/nature${i + 1}.jpg`), ...Array.from({ length: 15 }, (_, i) => `galleria/galleria${i + 1}.jpg`), ...Array.from({ length: 15 }, (_, i) => `galleria/galleria${i + 1}s.jpg`)];
 
 function collectConcatenated() {
     const found = new Set();
