@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { ButtonModule } from '@openng/optimus-ui/button';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
     standalone: true,
@@ -20,4 +21,13 @@ import { CommonModule } from '@angular/common';
         </div>
     </div>`
 })
-export class NotFoundDemo {}
+export class NotFoundDemo implements OnInit {
+    private titleService = inject(Title);
+
+    private metaService = inject(Meta);
+
+    ngOnInit() {
+        this.titleService.setTitle('Page Not Found - Optimus UI');
+        this.metaService.updateTag({ name: 'robots', content: 'noindex' });
+    }
+}
