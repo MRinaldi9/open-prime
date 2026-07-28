@@ -1,4 +1,5 @@
 import { AppConfigService } from '@/service/appconfigservice';
+import { SeoService } from '@/service/seoservice';
 import { CarService } from '@/service/carservice';
 import { CountryService } from '@/service/countryservice';
 import { CustomerService } from '@/service/customerservice';
@@ -8,7 +9,7 @@ import { PhotoService } from '@/service/photoservice';
 import { ProductService } from '@/service/productservice';
 import { DOCUMENT, IMAGE_CONFIG } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { afterNextRender, Component, Inject, PLATFORM_ID, Renderer2 } from '@angular/core';
+import { afterNextRender, Component, inject, Inject, PLATFORM_ID, Renderer2 } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 
@@ -36,12 +37,16 @@ import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
     ]
 })
 export class AppComponent {
+    private seoService = inject(SeoService);
+
     constructor(
         @Inject(DOCUMENT) private document: Document,
         private renderer: Renderer2,
         private router: Router,
         @Inject(PLATFORM_ID) private platformId: any
     ) {
+        this.seoService.init();
+
         afterNextRender(() => {
             if (process.env.NODE_ENV === 'production') {
                 this.injectScripts();
