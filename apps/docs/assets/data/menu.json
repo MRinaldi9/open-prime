@@ -566,6 +566,10 @@
             "icon": "pi pi-question",
             "children": [
                 {
+                    "name": "FAQ",
+                    "routerLink": "/faq"
+                },
+                {
                     "name": "Angular Discord",
                     "href": "https://discord.gg/angular"
                 },
