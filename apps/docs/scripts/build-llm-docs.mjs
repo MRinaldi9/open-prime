@@ -64,7 +64,8 @@ const COMPONENT_NAME_MAP = {
 // Components whose documentation directory name differs from their public route.
 // Keep in sync with router/app.routes.ts.
 const COMPONENT_ROUTE_MAP = {
-    scroller: 'virtualscroller'
+    scroller: 'virtualscroller',
+    Image: 'image'
 };
 
 // Guide/documentation pages configuration
@@ -535,7 +536,6 @@ function getAllComponents() {
         'tailwind',
         'colors',
         'primeflex',
-        'Image',
         'domain',
         'filterservice',
         'classnames',

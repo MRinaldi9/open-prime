@@ -184,7 +184,7 @@ import { OverviewApp } from './samples/overviewapp.component';
                             </div>
                             <p-divider />
                             <div [class]="isSlimMenu ? 'justify-center' : ' gap-3'" class="flex items-center">
-                                <p-avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/main-avatar.png" size="large" shape="circle" class="shrink-0" />
+                                <p-avatar image="/demo/landing/apps/main-avatar.png" size="large" shape="circle" class="shrink-0" />
                                 <div>
                                     <div [class]="isSlimMenu ? 'hidden' : 'text-base font-medium text-color leading-5'">Robin Jonas</div>
                                     <div [class]="isSlimMenu ? 'hidden' : 'text-sm text-muted-color mt-1'">hi&#64;robin.xyz</div>
@@ -205,7 +205,7 @@ import { OverviewApp } from './samples/overviewapp.component';
                     <div class="flex flex-col h-screen overflow-auto">
                         <div class="">
                             <div class="flex align-items-center gap-3 p-6">
-                                <p-avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar11.jpg" size="large" class="rounded-xl overflow-hidden" />
+                                <p-avatar image="/demo/landing/apps/avatar11.jpg" size="large" class="rounded-xl overflow-hidden" />
                                 <div class="flex-1">
                                     <div class="leading-6 text-color font-medium">Brook Simmons</div>
                                     <div class="mt-1 leading-5 text-muted-color text-sm">Sales Executive</div>
@@ -451,32 +451,32 @@ export class HeroSectionComponent implements OnInit, OnDestroy {
             {
                 icon: 'pi pi-home',
                 title: 'Overview',
-                src: 'https://www.primefaces.org/cdn/primevue/images/landing/apps/sampleshots/overview'
+                src: '/demo/landing/apps/sampleshots/overview'
             },
             {
                 icon: 'pi pi-comment',
                 title: 'Chat',
-                src: 'https://www.primefaces.org/cdn/primevue/images/landing/apps/sampleshots/chat'
+                src: '/demo/landing/apps/sampleshots/chat'
             },
             {
                 icon: 'pi pi-inbox',
                 title: 'Inbox',
-                src: 'https://www.primefaces.org/cdn/primevue/images/landing/apps/sampleshots/mail'
+                src: '/demo/landing/apps/sampleshots/mail'
             },
             {
                 icon: 'pi pi-th-large',
                 title: 'Cards',
-                src: 'https://www.primefaces.org/cdn/primevue/images/landing/apps/sampleshots/cards'
+                src: '/demo/landing/apps/sampleshots/cards'
             },
             {
                 icon: 'pi pi-user',
                 title: 'Customers',
-                src: 'https://www.primefaces.org/cdn/primevue/images/landing/apps/sampleshots/customers'
+                src: '/demo/landing/apps/sampleshots/customers'
             },
             {
                 icon: 'pi pi-video',
                 title: 'Movies',
-                src: 'https://www.primefaces.org/cdn/primevue/images/landing/apps/sampleshots/movies'
+                src: '/demo/landing/apps/sampleshots/movies'
             }
         ];
         this.selectedSampleOption = this.sampleOptions[0];
@@ -596,32 +596,32 @@ export class HeroSectionComponent implements OnInit, OnDestroy {
 
         this.callLogs = [
             {
-                image: 'https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar6.png',
+                image: '/demo/landing/apps/avatar6.png',
                 name: 'Brook Simmons',
                 time: '02.02.2024 | 45 min'
             },
             {
-                image: 'https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar12.jpg',
+                image: '/demo/landing/apps/avatar12.jpg',
                 name: 'Jacob Jones',
                 time: '02.02.2024 | 45 min'
             },
             {
-                image: 'https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar13.jpg',
+                image: '/demo/landing/apps/avatar13.jpg',
                 name: 'Annette Black',
                 time: '02.03.2024 | 13 min'
             },
             {
-                image: 'https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar9.jpg',
+                image: '/demo/landing/apps/avatar9.jpg',
                 name: 'Arlene McCoy',
                 time: '02.03.2024 | 14 min'
             },
             {
-                image: 'https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar10.jpg',
+                image: '/demo/landing/apps/avatar10.jpg',
                 name: 'Arlene Simmons',
                 time: '02.03.2024 | 14 min'
             },
             {
-                image: 'https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar11.jpg',
+                image: '/demo/landing/apps/avatar11.jpg',
                 name: 'Michael Brown',
                 time: '02.04.2024 | 20 min'
             }
@@ -629,42 +629,42 @@ export class HeroSectionComponent implements OnInit, OnDestroy {
 
         this.emailRecords = [
             {
-                image: 'https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar2.png',
+                image: '/demo/landing/apps/avatar2.png',
                 name: 'Brook Simmons',
                 time: '3:24 PM',
                 title: 'Unleash Business Potential',
                 text: 'Automate, analyze, and accelerate with our SaaS platform. Unshackle from mundane tasks and focus on scaling your business. Contact us for a demo today!'
             },
             {
-                image: 'https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar7.png',
+                image: '/demo/landing/apps/avatar7.png',
                 name: 'Jacob Jones',
                 time: '12.23.2023',
                 title: 'Optimized Workflow Revolution  ',
                 text: "Experience a workflow revolution with our intuitive SaaS tool. With enhanced features and optimized processes, it's efficiency like never before. Let's get in touch for a brief demo!"
             },
             {
-                image: 'https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar8.png',
+                image: '/demo/landing/apps/avatar8.png',
                 name: 'Annette Black',
                 time: '12.17.2023',
                 title: 'Innovation at Fingertips',
                 text: 'With our SaaS solution, innovation is only a click away. Shape your future with pioneering features and minimalist design. Join us for your solution walk-through today!'
             },
             {
-                image: 'https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar11.jpg',
+                image: '/demo/landing/apps/avatar11.jpg',
                 name: 'Arlene McCoy',
                 time: '06.17.2023',
                 title: 'Seamless Integration',
                 text: 'Integrate effortlessly with our user-friendly SaaS tools. Streamline your operations and boost productivity. Discover more in our demo session.'
             },
             {
-                image: 'https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar13.jpg',
+                image: '/demo/landing/apps/avatar13.jpg',
                 name: 'Arlene Simmons',
                 time: '04.17.2023',
                 title: 'Transform Your Business',
                 text: 'Empower your team with our innovative SaaS solutions. Achieve unparalleled efficiency and drive growth. Book a demo to explore the possibilities.'
             },
             {
-                image: 'https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar2.png',
+                image: '/demo/landing/apps/avatar2.png',
                 name: 'Michael Brown',
                 time: '01.05.2024',
                 title: 'Next-Gen Collaboration',

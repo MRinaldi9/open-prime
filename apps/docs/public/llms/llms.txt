@@ -60,6 +60,7 @@
 - [Angular Gallery Component](https://optimus.openng.org/galleria): Galleria is an advanced content gallery component.
 - [Angular IconField Component](https://optimus.openng.org/iconfield): IconField wraps an input and an icon.
 - [Angular Ifta Label Component](https://optimus.openng.org/iftalabel): IftaLabel is used to create infield top aligned labels.
+- [Angular Image Component](https://optimus.openng.org/image): Displays an image with preview and tranformation options.
 - [Angular ImageCompare Component](https://optimus.openng.org/imagecompare): Compare two images side by side with a slider.
 - [Angular Inplace Component](https://optimus.openng.org/inplace): Inplace provides an easy to do editing and display at the same time where clicking the output displays the actual content.
 - [Angular InputGroup Component](https://optimus.openng.org/inputgroup): Text, icon, buttons and other content can be grouped next to an input.
