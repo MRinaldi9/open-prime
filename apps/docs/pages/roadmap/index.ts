@@ -46,7 +46,7 @@ export class RoadmapDemo {
         this.events = [
             {
                 title: 'v1',
-                features: ['Rebranded from Optimus UI', 'Angular v21 compatible', 'ng add support for seamless installation', 'Schematic to migrate from Optimus UI'],
+                features: ['Rebranded from PrimeNG', 'Angular v21 compatible', 'ng add support for seamless installation', 'Schematic to migrate from PrimeNG'],
                 link: 'https://github.com/openng-org/optimus-ui/milestone/8'
             },
             {
