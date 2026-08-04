@@ -39,22 +39,29 @@
         "build:prebuild": "node ./scripts/prebuild.mjs",
         "build:postbuild": "node ./scripts/postbuild.mjs",
         "build:schematics": "node ./scripts/build-schematics.mjs",
-        "test:schematics": "node ./scripts/build-schematics.mjs && vitest run",
+        "test:schematics": "node ./scripts/build-schematics.mjs && vitest run --config vitest.schematics.config.mts",
         "dev:link": "pnpm link --global && npm link",
         "lint": "ng lint",
         "test:unit": "ng test optimus-ui --watch=false --browsers=ChromeHeadless",
         "test:unit:watch": "ng test optimus-ui",
-        "test:unit:coverage": "ng test optimus-ui --coverage"
+        "test:unit:coverage": "ng test optimus-ui --coverage",
+        "test:vitest": "ng run optimus-ui:test-vitest --watch=false",
+        "test:vitest:watch": "ng run optimus-ui:test-vitest --watch",
+        "test:vitest:coverage": "ng run optimus-ui:test-vitest --watch=false --coverage"
     },
     "devDependencies": {
         "@angular-devkit/schematics": "^22.0.0",
+        "@angular/build": "catalog:angular22",
         "@schematics/angular": "^22.0.0",
         "@types/node": "^22.10.0",
+        "@vitest/browser-playwright": "^4.0.8",
+        "@vitest/coverage-v8": "^4.0.8",
         "karma": "~6.4.4",
         "karma-chrome-launcher": "~3.2.0",
         "karma-coverage": "~2.2.1",
         "karma-jasmine": "~5.1.0",
         "karma-jasmine-html-reporter": "~2.1.0",
+        "karma-junit-reporter": "^2.0.1",
         "tslib": "^2.8.1",
         "typescript": "catalog:angular22",
         "vitest": "^4.0.8"
@@ -64,14 +71,14 @@
         "@angular/common": "catalog:angular22",
         "@angular/core": "catalog:angular22",
         "@angular/forms": "catalog:angular22",
-        "@angular/router": "catalog:angular22",
         "@angular/platform-browser": "catalog:angular22",
+        "@angular/router": "catalog:angular22",
         "rxjs": "^6.0.0 || ^7.8.1"
     },
     "dependencies": {
+        "@openng/optimus-ui-motion": "workspace:*",
         "@openng/optimus-ui-styled": "workspace:*",
-        "@openng/optimus-ui-utils": "workspace:*",
         "@openng/optimus-ui-styles": "workspace:*",
-        "@openng/optimus-ui-motion": "workspace:*"
+        "@openng/optimus-ui-utils": "workspace:*"
     }
 }
