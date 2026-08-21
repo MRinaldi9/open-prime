@@ -2653,3 +2653,59 @@ describe('AutoComplete', () => {
         });
     });
 });
+
+describe('AutoComplete generic typing', () => {
+    interface Country {
+        name: string;
+        code: string;
+    }
+
+    const afghanistan: Country = { name: 'Afghanistan', code: 'AF' };
+
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            imports: [AutoCompleteModule],
+            providers: [provideZonelessChangeDetection()]
+        }).compileComponents();
+    });
+
+    it('should type the select event value as the suggestion type', () => {
+        const event: AutoCompleteSelectEvent<Country> = { originalEvent: new Event('click'), value: afghanistan };
+
+        // Fails to compile if `value` is widened back to `any`.
+        const name: string = event.value.name;
+
+        expect(name).toBe('Afghanistan');
+    });
+
+    it('should type the unselect event value as the suggestion type', () => {
+        const event: AutoCompleteUnselectEvent<Country> = { originalEvent: new Event('click'), value: afghanistan };
+
+        const code: string = event.value.code;
+
+        expect(code).toBe('AF');
+    });
+
+    it('should propagate the component type argument to the select output', () => {
+        const typedFixture: ComponentFixture<AutoComplete<Country>> = TestBed.createComponent<AutoComplete<Country>>(AutoComplete);
+        const typedComponent = typedFixture.componentInstance;
+        let selectedName: string | undefined;
+
+        typedComponent.onSelect.subscribe((event) => (selectedName = event.value.name));
+        typedComponent.suggestions = [afghanistan];
+        typedComponent.onOptionSelect(new Event('click'), afghanistan);
+
+        expect(selectedName).toBe('Afghanistan');
+    });
+
+    it('should type the add event value as free text', () => {
+        const typedFixture: ComponentFixture<AutoComplete<Country>> = TestBed.createComponent<AutoComplete<Country>>(AutoComplete);
+        const typedComponent = typedFixture.componentInstance;
+        let addedValue: string | undefined;
+
+        typedComponent.onAdd.subscribe((event) => (addedValue = event.value.trim()));
+        typedComponent.onAdd.emit({ originalEvent: new Event('blur'), value: ' Afghanistan ' });
+
+        expect(addedValue).toBe('Afghanistan');
+    });
+});
