@@ -6,9 +6,9 @@ import {
     computed,
     ContentChild,
     ContentChildren,
-    EmbeddedViewRef,
     effect,
     ElementRef,
+    EmbeddedViewRef,
     EventEmitter,
     forwardRef,
     HostListener,
@@ -16,7 +16,6 @@ import {
     InjectionToken,
     input,
     Input,
-    isDevMode,
     NgModule,
     NgZone,
     numberAttribute,
@@ -978,7 +977,7 @@ export class AutoComplete<T = any> extends BaseInput<AutoCompletePassThrough> {
         private zone: NgZone
     ) {
         super();
-        if (isDevMode()) {
+        if (ngDevMode) {
             const refEffect = effect(() => {
                 const value = this.modelValue();
                 const label = this.optionLabel;
