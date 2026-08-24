@@ -7,6 +7,7 @@ import {
     ContentChild,
     ContentChildren,
     EmbeddedViewRef,
+    effect,
     ElementRef,
     EventEmitter,
     forwardRef,
@@ -15,6 +16,7 @@ import {
     InjectionToken,
     input,
     Input,
+    isDevMode,
     NgModule,
     NgZone,
     numberAttribute,
@@ -910,7 +912,7 @@ export class AutoComplete<T = any> extends BaseInput<AutoCompletePassThrough> {
 
                 const label = this.getOptionLabel(selectedOption);
 
-                return label != null ? label : modelValue;
+                return label != null ? (typeof label === 'object' ? '' : label) : modelValue;
             } else {
                 return modelValue;
             }
@@ -976,6 +978,18 @@ export class AutoComplete<T = any> extends BaseInput<AutoCompletePassThrough> {
         private zone: NgZone
     ) {
         super();
+        if (isDevMode()) {
+            const refEffect = effect(() => {
+                const value = this.modelValue();
+                const label = this.optionLabel;
+                const valueField = this.optionValue;
+                const isMultiple = this.multiple;
+                if (!isMultiple && isNotEmpty(value) && typeof value === 'object' && (!label || !valueField)) {
+                    console.warn('When using an object as a model value, you must define optionLabel and optionValue property to determine how to display the selected value.');
+                    refEffect.destroy();
+                }
+            });
+        }
     }
 
     onInit() {
